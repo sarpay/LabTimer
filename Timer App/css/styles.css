@@ -1,0 +1,526 @@
+﻿/*@media only screen and (max-width: 320px) {
+    body { font-size: 2em; }
+    .countdown { height: 25%; }
+   		
+}*/
+
+body {
+    /*
+    font-family: sans-serif;
+    font-family: 'Open Sans', HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    */
+    /* Avenir-Book, Avenir-Light, AvenirNext-Regular, AvenirNextCondensed-Regular, GillSans-Light, AvenirNextCondensed-UltraLight */
+    font-family: Avenir-Book, HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    /*font-weight: bold;*/
+}
+
+input, textarea, keygen, select {
+    color: #808080;
+}
+
+/*********** KENDO ***********/
+
+.km-ios7 * {
+    /*
+    font-family: sans-serif !important;
+    font-family: 'Open Sans', HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    */
+    font-family: Avenir-Book, HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    /*font-weight: bold;*/
+}
+
+/* allow top spacing for statusbar */
+.km-header {
+    margin-top: 20px;
+}
+
+/* "nthoftype" makes sure that styling gets applied to 
+    FIRST HEADER, in this case the "logo header" only */
+.km-header:nth-of-type(1) {
+    /* create top round corners where header meets statusbar */
+    background: rgb(0, 0, 0);
+}
+
+/*
+.km-ios7,
+.km-ios7.km-pane .km-content {
+    background-color: #0078BE;
+    background-color: #007AFF;
+}
+*/
+
+/* "nthoftype" makes sure that styling gets applied to 
+    FIRST HEADER, in this case the "logo header" only */
+.km-ios7 .km-header .km-navbar:nth-of-type(1) {
+    /* draws the thick turqoise bar between logo and content */
+    border: 1px solid rgba(29, 158, 223, 0.3);
+    border-width: 0 0 3px;
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px !important;
+}
+
+.km-ios7 .km-navbar,
+.km-ios7 .km-tabstrip {
+    background-color: rgba(244, 244, 244, 1);
+}
+.km-ios7 .km-view-title { /*** NAVBAR LOGO VERTICAL ALIGNMENT ***/
+    line-height: 32px; 
+    padding-top: 12px;
+    /* 
+        use in conjunction with 
+        initViewUISettings
+        $('.km-view .km-view-title').css('padding-top', '24px');
+    */
+}
+.km-ios7 .km-tabstrip .km-text {
+    font-family: Avenir-Heavy, HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+.km-modalview {
+    left: 2px;
+}
+.km-text {
+    /*font-family: 'Open Sans', HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+}
+.km-widget.km-buttongroup .km-button {
+    padding: .7em;
+    height: 40px;
+}
+.km-widget.km-navbar .km-buttongroup>.km-button {
+    text-align: center;
+    font-size: 18px;
+}
+.km-ios7 .km-list > li {
+    color: #808080;
+    font-size: 1.1em;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-image: none;
+}
+.km-list:not(.km-virtual-list)>li:last-child {
+    border-bottom: 1px solid rgba(180, 180, 180, 0.5);
+}
+.km-ios7 .km-list>li:last-child {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.km-list .km-icon {
+    margin-left: 0;
+    margin-right: 7px;
+    margin-top: 2px;
+}
+
+.km-ios7 .km-list input[type=password], 
+.km-ios7 .km-list input[type=search], 
+.km-ios7 .km-list input[type=number], 
+.km-ios7 .km-list input[type=tel], 
+.km-ios7 .km-list input[type=url], 
+.km-ios7 .km-list input[type=email], 
+.km-ios7 .km-list input[type=month], 
+.km-ios7 .km-list input[type=color], 
+.km-ios7 .km-list input[type=week], 
+.km-ios7 .km-list input[type=date], 
+.km-ios7 .km-list input[type=time], 
+.km-ios7 .km-list input[type=datetime], 
+.km-ios7 .km-list input[type=datetime-local], 
+.km-ios7 .km-list input[type=text]:not(.k-input), 
+.km-ios7 .km-list select:not([multiple]), 
+.km-list .k-dropdown, 
+.km-ios7 .km-list .k-dropdown-wrap, 
+.km-ios7 .km-list textarea {
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+    font-size: 18px;
+}
+.km-ios7 .km-list input[type=text]:not(.k-input) {
+    padding-top: 6px;
+    padding-left: 20px;
+    position: relative;
+}
+.km-ios7 .km-list textarea {
+    resize: none;
+    height: 68px;
+}
+
+.km-ios7 .km-pages li { /* default pager border color */
+    border-color: #A0A0A0;
+}
+
+/*** KENDO BUTTONS ***/
+
+.km-button .km-icon.km-add:not(.km-notext) {
+    margin-top: 3px;
+}
+.km-button .km-icon.km-trash:not(.km-notext), 
+.km-button .km-icon.km-delete:not(.km-notext) {
+    margin-top: 2px;
+}
+.km-button .km-icon.km-compose.km-notext {
+    margin-top: 1px;
+}
+
+/* http://docs.kendoui.com/getting-started/mobile/icons */
+/* OK: '\e227' */
+/* MAP: '\e0b4' */
+/* EMAIL 1: '\e099' */
+/* CHECK (OK): '\e030' */
+/* TOOLBOX: '\e088' */
+/* PICTURE: '\e07c' */
+/* CAMERA 1: '\e08a' */
+/* CAMERA 2: '\e0d0' */
+/* CANCEL: '\e031' */
+/* ADD 1: '\e032' */
+/* ADD 2: '\e034' */
+/* REMOVE: '\e033' */
+/* VIDEO 1: '\e09e' */
+/* VIDEO 2: '\e08b' */
+/* OPEN IN NEW PAGE 1: '\e075' */
+/* OPEN IN NEW PAGE 2: '\e076' */
+/* BOOK: '\e086' */
+/* CALENDAR: '\e089' */
+/* DOWNLOAD: '\e096' */
+/* UPLOAD: '\e0c6' */
+
+.km-globe:after, 
+.km-globe:before { 
+    content: '\e075' !important;
+}
+.km-featured:after, 
+.km-featured:before { 
+    content: '\e227' !important;
+    font-size: 22px !important;
+}
+.km-featured {
+    margin-right: .5em !important;
+    margin-left: -0.7em !important;
+    margin-top: 0.1em !important;
+}
+.km-delete:after, 
+.km-delete:before { 
+    content: '\e031' !important;
+    font-size: 33px !important;
+}
+.km-delete {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 22px !important;
+    display: inline !important;
+}
+/*#modalview-timers-list */
+.km-navbar .km-rightitem {
+    right: 0;
+}
+/*#modalview-timers-list */
+.km-navbar .km-rightitem .km-button {
+    padding: 6px 10px 5px 10px !important;
+    margin: 0 !important;
+    font-size: 22px !important;
+}
+
+/*****************************/
+
+.canvas {
+    margin: 10px;
+}
+#home-canvas {
+    
+}
+
+/***** BUTTONS *****/
+
+.controls {
+    width: 100%;
+    border: 1px solid rgba(180, 180, 180, 0.5);
+    border-radius: 6px;
+    /*padding: 10px 0 10px 0;*/
+}
+.control-left {
+    width: 33%;
+    float: left;
+    border-right: 1px solid rgba(180, 180, 180, 0.5);
+}
+.control-middle {
+    width: 33%;
+    float: left;
+    border-right: 1px solid rgba(180, 180, 180, 0.5);
+}
+.control-right {
+    width: -webkit-calc(34% + 1px);
+    float: left;
+}
+.control-btn {
+    width: 100% !important;
+    height: 80px !important;
+    background-size: 60px 60px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+.load-btn {
+    background-image: url('../icons/plus-84.png');
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    opacity: 0.5;
+}
+.start-btn {
+    background-image: url('../icons/play-84.png');
+    opacity: 0.5;
+}
+.pause-btn {
+    background-image: url('../icons/pause-84.png');
+    opacity: 0.5;
+    display: none;
+}
+.destroy-btn {
+    background-image: url('../icons/minus-84.png');
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0.5;
+    /*display: none;*/
+}
+.pager {
+    width: 100%;
+    border: 1px solid rgba(180, 180, 180, 0.5);
+    border-radius: 6px;
+    margin: 0px 0px 10px 0px;
+    /*padding: 10px 0 10px 0;*/
+}
+.pager-left {
+    width: 50%;
+    float: left;
+    border-right: 1px solid rgba(180, 180, 180, 0.5);
+}
+.pager-right {
+    width: 50%;
+    float: left;
+}
+.pager-btn {
+    width: 100% !important;
+    height: 50px !important;
+    background-size: 30px 30px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+.prev-btn {
+    background-image: url('../icons/prev-84.png');
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    opacity: 0.5;
+}
+.next-btn {
+    background-image: url('../icons/next-84.png');
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0.5;
+}
+.touched {
+    /*background-color: #80bdff;*/
+    background-color: #007AFF;
+    opacity: 0.7 !important;
+}
+.btn-off {
+    opacity: 0.1;
+}
+
+.header-btn {
+    margin: 10px 0 10px 0 !important;
+}
+.listview-btn {
+    float: right;
+    font-size: 22px !important;
+    margin-top: -13px;
+    padding: 3px 3px 0 3px !important;
+    height: 32px;
+}
+
+.btn {
+    font-size: 18px !important;
+    font-weight: normal;
+    padding: 8px 10px 0 10px !important;
+    height: 40px;
+}
+.long-btn {
+    width: 180px;
+}
+.short-btn {
+    width: 100px;
+}
+
+/*****************************/
+
+/***** SCROLLVIEW *****/
+
+.scrollview {
+    margin: 10px 0 10px 0;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid rgba(180, 180, 180, 0.5);
+    border-radius: 6px;
+}
+.timer-title {
+    font-weight: bold;
+    height: 30px;
+    font-size: 18px;
+    padding: 0px 10px 0px 10px;
+}
+.timer-descr {
+    height: 60px;
+    font-size: 16px;
+    color: #808080;
+    padding: 0px 10px 0px 10px;
+}
+.timer-title,
+.timer-descr {
+    width: 100%;
+    white-space: normal !important;
+}
+.timer-page {
+    /*** CANNOT CUSTOM SPECIFY THE WIDTH OF A KENDO SCROLLVIEW PAGE ***/
+    /*width: -webkit-calc(100% -2px) !important;*/
+    /*width: 100% !important;*/
+}
+.timer-container {
+    display: none;
+    padding-right: 2px; /* width offset to correctly center timer (counts for 1px borders on each side of .scrollview) */
+}
+.empty-outer-box {
+    text-align: center;
+    height: 190px; /* .countdown (150) + .timer-title (30) + .timer-descr (60) */
+}
+.empty-outer-box:before { /* The ghost, nudged to maintain perfect centering */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+.empty-inner-box { /* The element to be centered, can also be of any width and height */ 
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: normal !important;
+}
+.highlight {
+    color: #f00;
+}
+
+/*****************************/
+
+
+.formElemTitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px 10px 2px 10px;
+}
+.formElemSmallTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007AFF;
+}
+.liFormElem {
+    border: 1px solid rgba(180, 180, 180, 0.5) !important;
+    border-radius: 6px !important;
+    min-height: 44px !important;
+}
+/*.customInput {
+    width: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgba(180, 180, 180, 0.5);
+    border-radius: 6px;
+    border-image-width: 0;
+}*/
+.customSelect {
+    width: 75px;
+    height: 44px;
+    padding: 10px 0px 10px 26px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid rgba(180, 180, 180, 0.5);
+    border-radius: 6px;
+    border-image-width: 0;
+}
+
+/** RESULT MESSAGE MODALVIEW **/
+
+.km-shim.km-modalview-root.k-state-border-down {
+    /** makes sure that this modalview appears 
+    over on top of all other modalview **/
+    z-index: 99000;
+}
+#modalviewResult > div.km-content.km-widget.km-scroll-wrapper {
+    border-radius: 6px;
+}
+.bigIcon {
+    width: 64px;
+    height: 64px;
+    border: 0;
+}
+.modalText {
+    font-size: 1em;
+    /*font-weight: bold;*/
+    clear: both;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
+.closeModalDiv {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+}
+
+/** COUNTDOWN.CSS MODS **/
+
+.countdown-outer-box {
+    text-align: center;
+	height: 100px; /* change .empty-outer-box if this changes */
+	/*border: 1px dashed #ccc;
+	border-radius: 6px;*/
+}
+.countdown-outer-box:before {
+    content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em; /* Adjusts for spacing */
+}
+.countdown { 
+    display: inline-block;
+	vertical-align: middle;
+    width: 100%;
+	padding-bottom: 18px !important;
+}
+/*.countdown-row { 
+    padding: 0px !important;
+}*/
+.countdown-section {
+    /*font-size: 14px !important;*/
+    
+}
+.countdown-amount {
+    font-size: 50px !important;
+}
+.countdown-period {
+    font-size: 18px !important;
+}
+/*.countdown-show3 .countdown-section {
+	width: 70px !important;
+}*/
+.countdown-holding span {
+    color: #808080;
+}	
+.is-countdown {
+    /*-webkit-border-radius: 6px;*/
+    border: none;
+    background-color: #fff;
+}
+
+/************************/
