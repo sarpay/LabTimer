@@ -1,4 +1,4 @@
-﻿/*@media only screen and (max-width: 320px) {
+/*@media only screen and (max-width: 320px) {
     body { font-size: 2em; }
     .countdown { height: 25%; }
    		
@@ -29,10 +29,11 @@ input, textarea, keygen, select {
     /*font-weight: bold;*/
 }
 
-/* allow top spacing for statusbar */
+/* allow top spacing for statusbar
 .km-header {
     margin-top: 20px;
 }
+*/
 
 /* "nthoftype" makes sure that styling gets applied to 
     FIRST HEADER, in this case the "logo header" only */
