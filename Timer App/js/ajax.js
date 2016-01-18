@@ -1,7 +1,7 @@
 //*** api constants
 var API_TOKEN = 'Nh42O4r4cd8NonuzkuYzJT';
 //var SERVICE_URI_BASE = 'http://localhost/empiricaltimer/MobileService.asmx/';
-var SERVICE_URI_BASE = 'http://timerapp.empiricalbioscience.com.asp1-27.dfw1-2.websitetestlink.com/MobileService.asmx/';
+var SERVICE_URI_BASE = 'http://timerapp.empiricalbioscience.com.asp1-27.dfw3-2.websitetestlink.com/MobileService.asmx/';
 
 var FUNC_GET_USER_BY_UUID = SERVICE_URI_BASE + 'GetUserByUUID';
 var FUNC_NEW_USER_BY_UUID = SERVICE_URI_BASE + 'NewUserByUUID';
